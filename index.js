@@ -172,7 +172,7 @@ app.get(/^\/create\/?$/,function(req,res) {
     res.mustachy
         .set('title','Create!')
         .call('set',LAST_SENT_DATA)
-        .call('appendTemplate','create.html','body',{from:FROM})
+        .call('appendTemplate','create.html','body',{from:JSON.stringify(FROM)})
         .call('render');
 });
 
