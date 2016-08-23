@@ -122,6 +122,10 @@ sudo service nginx restart
 /etc/init.d/nginx restart
 ```
 
+# SENDER INFORMATION
+
+To modify sender information, modify files `./PLS/emails-from.json` (customer will receive surveys from this person) and  `./PLS/emails-to.json` (person who will receive the survey's answers). 
+
 # TEMPLATE MODIFICATION
 
 Go to `$ ./PLS/assets/public/pls` you will see `email-pls.html` and `email-petroleum.html` inside. Images for template `email-pls.html` are stored in folder `email-1` and images for template `email-petroleum.html` in folder `email-2`.
@@ -132,4 +136,4 @@ If you modify anithing on the templates file, you are gonna have to run: `./PLS/
 
 # USAGE
 
-Access from your browser http://yourdomain.com/create in order to send a survey.
+Access from your browser http://yourdomain.com/create with the credentials defined on `$ADMIN_USER` and `$ADMIN_PASSWORD` in order to send a survey.
