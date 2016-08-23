@@ -75,7 +75,7 @@ $ nano pls-survey
 
 Paste this content:
 
-```js
+```nginx
 upstream pls {
     server 127.0.0.1:[PORT]; # replace [PORT] for the value assigned on PLS_PORT
     keepalive 8;
