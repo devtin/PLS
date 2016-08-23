@@ -71,7 +71,7 @@ Then run:
 ./run.sh
 ```
 
-You can monitor the status on `output.log`
+You can monitor the status of the app on `output.log`. PID is written in file `./PLS/pid`.
 
 # INSTALLING BEHIND NGINX
 
@@ -93,7 +93,7 @@ upstream pls {
 # the nginx server instance
 server {
 	listen 80;
-	server_name survey.wikot.com; # replace for which ever domain you want to use
+	server_name survey.wikot.com; # replace for whatever domain you want to use
 
 	location / {
 		proxy_set_header X-Real-IP $remote_addr;
