@@ -38,7 +38,7 @@ export PLS_PORT=XX
 export ADMIN_USER=admin
 export ADMIN_PASSWORD=xxxxxx
 export SENDINBLUE_KEY=xxxxxx
-kill $(<pid) > /dev/null 2>&1
+kill $(<pid) &>/dev/null
 sleep 1
 nohup node index.js &>/dev/null & echo $! > pid
 ```
