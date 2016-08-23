@@ -1,6 +1,6 @@
-# TOPICS
+# Topics
 
-- [Requirements](#requirements)
+- [Prerequisites](#prerequisites)
 - [Installation](#installation)
 - [Setup](#setup)
 - [Running](#running)
@@ -9,21 +9,21 @@
 - [Template modification](#template-modification)
 - [Usage](#usage)
 
-# REQUIREMENTS
+# Prerequisites
 
 - [node.js](https://nodejs.org)
 - [nohup](https://en.wikipedia.org/wiki/Nohup) (for linux and the sake of this doc)
 
 PS: this documentation is Linux oriented even though node.js can be run on windows too.
 
-# INSTALLATION
+# Installation
 
 ```sh
 $ git clone https://github.com/devtin/PLS.git
 $ cd PLS && npm install
 ```
 
-# SETUP
+# Setup
 
 Create a run file inside folder `PLS`:
 
@@ -59,7 +59,7 @@ Save: `ctrl+o [enter] ctrl+x`
 - **ADMIN_PASSWORD**: password to validate *ADMIN_USER*
 - **SENDINBLUE_KEY** [Sendinblue](https://www.sendinblue.com/) key to send the emails.
 
-# RUNNING
+# Running
 
 Give running permissions to our run.sh script
 
@@ -75,7 +75,7 @@ Then run:
 
 You can monitor the status of the app on `output.log`. PID is written in file `./PLS/pid`.
 
-# INSTALLING BEHIND NGINX
+# Installing behing NGINX
 
 Create an NGINX config file:
 
@@ -131,11 +131,11 @@ sudo service nginx restart
 /etc/init.d/nginx restart
 ```
 
-# SENDER INFORMATION
+# Sender Information
 
 To modify sender information, modify files `./PLS/emails-from.json` (customer will receive surveys from this person) and  `./PLS/emails-to.json` (person who will receive the survey's answers). 
 
-# TEMPLATE MODIFICATION
+# Template Modification
 
 Go to `$ ./PLS/assets/public/pls` you will see `email-pls.html` and `email-petroleum.html` inside. Images for template `email-pls.html` are stored in folder `email-1` and images for template `email-petroleum.html` in folder `email-2`.
 
@@ -143,6 +143,6 @@ CSS is created using [Sass](http://sass-lang.com/), CSS files for templates `ema
  
 If you modify anithing on the templates file, you are gonna have to run: `./PLS/assets/public/pls/./compile` in order to create a final version with the styles inline.
 
-# USAGE
+# Usage
 
 Access from your browser http://yourdomain.com/create with the credentials defined on `$ADMIN_USER` and `$ADMIN_PASSWORD` in order to send a survey.
