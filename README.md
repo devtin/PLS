@@ -122,7 +122,7 @@ Restart NGINX:
 # Ubuntu
 sudo service nginx restart
 
-# OpenBSD
+# BSD
 /usr/local/etc/rc.d/nginx restart
 
 # CentOS
