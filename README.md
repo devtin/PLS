@@ -4,7 +4,7 @@
 - [Installation](#installation)
 - [Setup](#setup)
 - [Running](#running)
-- [Installing behing NGINX](#installing-behind-nginx)
+- [Installing behind NGINX](#installing-behind-nginx)
 - [Sender information](#sender-information)
 - [Template modification](#template-modification)
 - [Usage](#usage)
@@ -75,7 +75,7 @@ Then run:
 
 You can monitor the status of the app on `output.log`. PID is written in file `./PLS/pid`.
 
-# Installing behing NGINX
+# Installing behind NGINX
 
 Create an NGINX config file:
 
