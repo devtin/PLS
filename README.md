@@ -11,8 +11,8 @@
 
 # Prerequisites
 
-- [node.js](https://nodejs.org){:target="_blank"}
-- [nohup](https://en.wikipedia.org/wiki/Nohup){:target="_blank"} (for linux and the sake of this doc)
+- [node.js](https://nodejs.org)
+- [nohup](https://en.wikipedia.org/wiki/Nohup) (for linux and the sake of this doc)
 
 PS: this documentation is Linux oriented even though node.js can be run on windows too.
 
@@ -57,7 +57,7 @@ Save: `ctrl+o [enter] ctrl+x`
 - **PLS_PORT**: port where the app is going to run
 - **ADMIN_USER**: user that can access the system
 - **ADMIN_PASSWORD**: password to validate *ADMIN_USER*
-- **SENDINBLUE_KEY** [Sendinblue](https://www.sendinblue.com/){:target="_blank"} key to send the emails.
+- **SENDINBLUE_KEY** [Sendinblue](https://www.sendinblue.com/) key to send the emails.
 
 # Running
 
@@ -139,7 +139,7 @@ To modify sender information, modify files `./PLS/emails-from.json` (customer wi
 
 Go to `$ ./PLS/assets/public/pls` you will see `email-pls.html` and `email-petroleum.html` inside. Images for template `email-pls.html` are stored in folder `email-1` and images for template `email-petroleum.html` in folder `email-2`.
 
-CSS is created using [Sass](http://sass-lang.com/){:target="_blank"}, CSS files for templates `email-pls.html` and `email-petroleum.html` are `css/style.css` and `css/style-2.css` respectively.
+CSS is created using [Sass](http://sass-lang.com/), CSS files for templates `email-pls.html` and `email-petroleum.html` are `css/style.css` and `css/style-2.css` respectively.
  
 If you modify anithing on the templates file, you are gonna have to run: `./PLS/assets/public/pls/./compile` in order to create a final version with the styles inline.
 
