@@ -11,7 +11,8 @@
 
 # REQUIREMENTS
 
-[node.js](https://nodejs.org)
+- [node.js](https://nodejs.org)
+- [nohup](https://en.wikipedia.org/wiki/Nohup)
 
 # INSTALLATION
 
