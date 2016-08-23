@@ -133,7 +133,7 @@ sudo service nginx restart
 
 # Sender Information
 
-To modify sender information, modify files `./PLS/emails-from.json` (customer will receive surveys from this person) and  `./PLS/emails-to.json` (person who will receive the survey's answers). 
+To modify sender information, access files `./PLS/emails-from.json` (customer will receive surveys from this person) and  `./PLS/emails-to.json` (person who will receive the survey's answers). 
 
 # Template Modification
 
