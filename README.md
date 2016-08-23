@@ -55,7 +55,7 @@ Save: `ctrl+o [enter] ctrl+x`
 
 # RUNNING
 
-Make sure you have `nohup` installed. Give running permissions to our run.sh script
+Give running permissions to our run.sh script
 
 ```sh
 $ chmod +x run.sh
