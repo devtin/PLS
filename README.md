@@ -43,6 +43,8 @@ sleep 1
 nohup node index.js &>/dev/null & echo $! > pid
 ```
 
+Save: `ctrl+o [enter] ctrl+x`
+
 - **PLS_PORT**: port where the app is going to run
 - **ADMIN_USER**: user that can access the system
 - **ADMIN_PASSWORD**: password to validate *ADMIN_USER*
@@ -95,6 +97,8 @@ server {
 	}
 }
 ```
+
+Save: `ctrl+o [enter] ctrl+x`
 
 Enable the new conf:
 
