@@ -115,7 +115,7 @@ Enable the new conf:
 
 ```sh
 $ cd /etc/nginx/sites-enabled
-$ ln -s ../sites-available/pls .
+$ ln -s ../sites-available/pls-survey .
 ```
 
 Restart NGINX:
