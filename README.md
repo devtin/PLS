@@ -12,7 +12,9 @@
 # REQUIREMENTS
 
 - [node.js](https://nodejs.org)
-- [nohup](https://en.wikipedia.org/wiki/Nohup)
+- [nohup](https://en.wikipedia.org/wiki/Nohup) (for linux and the sake of this doc)
+
+PS: this documentation is Linux oriented even though node.js can be run on windows too.
 
 # INSTALLATION
 
