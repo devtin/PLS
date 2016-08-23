@@ -14,7 +14,7 @@
 # INSTALLATION
 
 ```sh
-$ git clone git@github.com:devtin/PLS.git
+$ git clone https://github.com/devtin/PLS.git
 $ cd PLS && npm install
 ```
 
@@ -118,8 +118,8 @@ sudo service nginx restart
 
 # TEMPLATE MODIFICATION
 
-Go to `$ ./pls/assets/public/pls` you will see `email-pls.html` and `email-petroleum.html` inside. Images for template `email-pls.html` are stored in folder `email-1` and images for template `email-petroleum.html` in folder `email-2`.
+Go to `$ ./PLS/assets/public/pls` you will see `email-pls.html` and `email-petroleum.html` inside. Images for template `email-pls.html` are stored in folder `email-1` and images for template `email-petroleum.html` in folder `email-2`.
 
 CSS is created using [Sass](http://sass-lang.com/), CSS files for templates `email-pls.html` and `email-petroleum.html` are `css/style.css` and `css/style-2.css` respectively.
  
-If you modify anithing on the templates file, you are gonna have to run: `./pls/assets/public/pls/./compile` in order to create a final version with the styles inline.
+If you modify anithing on the templates file, you are gonna have to run: `./PLS/assets/public/pls/./compile` in order to create a final version with the styles inline.
