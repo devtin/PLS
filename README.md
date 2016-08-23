@@ -43,7 +43,7 @@ export ADMIN_PASSWORD=xxxxxx
 export SENDINBLUE_KEY=xxxxxx
 kill $(<pid) &>/dev/null
 sleep 1
-nohup node index.js &>/dev/null & echo $! > pid
+nohup node index.js &>output.log & echo $! > pid
 ```
 
 Save: `ctrl+o [enter] ctrl+x`
@@ -66,6 +66,8 @@ Then run:
 ```sh
 ./run.sh
 ```
+
+You can monitor the status on `output.log`
 
 # INSTALLING BEHIND NGINX
 
