@@ -15,7 +15,7 @@ var mustachy        = require('mustachy'),
     Promise         = require('bluebird'),
     basicAuth       = require('basic-auth-connect');
 
-if (!process.env.ADMIN_USER || process.env.ADMIN_PASSWORD) {
+if (!process.env.ADMIN_USER || !process.env.ADMIN_PASSWORD) {
     console.error('Environment variables ADMIN_USER and ADMIN_PASSWORD are required.');
     process.exit();
 }
