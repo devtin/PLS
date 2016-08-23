@@ -20,7 +20,7 @@ $ cd PLS && npm install
 
 # SETUP
 
-Create a run file inside folder `pls`:
+Create a run file inside folder `PLS`:
 
 ```sh
 $ nano run.sh
