@@ -133,7 +133,7 @@ sudo service nginx restart
 
 # Sender Information
 
-To modify sender information, access files `./PLS/emails-from.json` (customer will receive surveys from this person) and  `./PLS/emails-to.json` (person who will receive the survey's answers). 
+To modify sender information, access files `./PLS/emails-from.json` (customer will receive surveys from this person) and  `./PLS/emails-to.json` (person who will receive the survey's answers). If you modify any of those files you're gonna have re-run the app by doing `./PLS/./run.sh` (this script will kill the previous process and start a new one).
 
 # Template Modification
 
@@ -141,7 +141,7 @@ Go to `$ ./PLS/assets/public/pls` you will see `email-pls.html` and `email-petro
 
 CSS is created using [Sass](http://sass-lang.com/), CSS files for templates `email-pls.html` and `email-petroleum.html` are `css/style.css` and `css/style-2.css` respectively.
  
-If you modify anithing on the templates file, you are gonna have to run: `./PLS/assets/public/pls/./compile` in order to create a final version with the styles inline.
+If you modify anything on the templates or CSS files, you are gonna have to run: `./PLS/assets/public/pls/./compile` in order for this changes to take effect.
 
 # Usage
 
