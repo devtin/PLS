@@ -1,0 +1,54 @@
+@import "common";
+
+body {
+    margin:0;
+    padding:0;
+    color:#101d26;
+
+    strong {
+        color:#333;
+    }
+}
+
+a {
+    outline:none;
+    margin:0;
+    padding:0;
+    border:none;
+    text-decoration:none;
+    cursor:pointer;
+}
+
+table.main {
+    box-shadow:0 0 26px rgba(0,0,0,0.8);
+    display:block;
+    width:700px;
+    margin:0 auto;
+    background:#ffffff;
+
+    img {
+        display:block;
+        position:relative;
+        max-width:700px;
+        height:auto;
+    }
+
+    tr,td {
+        padding:0;
+    }
+
+    table.content {
+        h1 {
+            color:#f7931e;
+        }
+    }
+}
+
+a.survey {
+    $color:#0b6739;
+    background-color:$color;
+    border-top:7px solid $color;
+    border-bottom:7px solid $color;
+    border-left:50px solid $color;
+    border-right:50px solid $color;
+}

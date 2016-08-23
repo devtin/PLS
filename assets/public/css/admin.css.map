@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,UAAW,CACP,SAAS,CAAC,KAAK,CACf,UAAU,CAAC,KAAK,CAChB,UAAU,CAAC,IAAI,CAGnB,IAAK,CACD,UAAU,CAAC,OAAO",
+"sources": ["admin.scss"],
+"names": [],
+"file": "admin.css"
+}

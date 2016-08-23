@@ -1,0 +1,141 @@
+<div class="container">
+    <form action="/create/send" method="post" enctype="application/x-www-form-urlencoded" autocomplete="off" spellcheck="false">
+        <h3>Customer Information</h3>
+        <div class="form-group">
+            <input type="text" class="form-control" name="to_name" placeholder="Full Name">
+        </div>
+        <div class="form-group">
+            <input type="email" class="form-control" name="to_email" placeholder="Email">
+        </div>
+        <h3>Email</h3>
+        <div class="form-group">
+            <input type="text" class="form-control" name="subject" placeholder="Subject" value="{{last_subject}}">
+        </div>
+        <div class="form-group">
+            <select name="template" class="form-control">
+                <option value="">[ Select a template ]</option>
+                <option value="pls">PLS</option>
+                <option value="pet">Petroleum</option>
+            </select>
+        </div>
+        <h3>Sender Information</h3>
+        <div class="form-group">
+            <input type="text" class="form-control" name="from_name" placeholder="Full Name" value="{{last_from_name}}">
+        </div>
+        <div class="form-group">
+            <input type="email" class="form-control" name="from_email" placeholder="Email" value="{{last_from_email}}">
+        </div>
+        <h3>Almost there!</h3>
+        <div class="form-group">
+            <select name="action" class="form-control">
+                <option value="">[ What to do... ]</option>
+                <option value="send">Send this email right away!</option>
+                <option value="download">Download .eml</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <button class="btn btn-block btn-lg btn-primary" type="submit" disabled>Missing information...</button>
+        </div>
+    </form>
+</div>
+<script>
+
+    function getFormVals(f) {
+        f = f instanceof jQuery ? f : $(f);
+
+        if (!f.length)
+            return null;
+
+        var r = {};
+
+        f.find('input,textarea,select').each(function() {
+            var $this = $(this);
+
+            if ($this.attr('type') == 'radio' && !$this.prop('checked'))
+                return;
+
+            r[$this.attr('name')] = $this.val();
+        });
+
+        return r;
+    }
+
+    $(document).ready(function() {
+        function filled() {
+            var y = true;
+
+            fd.each(function() {
+                var $t = $(this);
+
+                if (!$t.val()) {
+                    y = false;
+                    return true;
+                }
+            });
+
+            return y;
+        }
+
+        var f       = $('form'),
+            fd      = f.find('input,select'),
+            st      = f.find('button');
+
+        f.find('select[name=template]').on('change',function() {
+            var $this       = $(this),
+                fromName    = f.find('input[name=from_name]'),
+                fromEmail   = f.find('input[name=from_email]');
+
+            if (!$this.val()) {
+                return;
+            }
+
+            if ($this.val() == 'pet') {
+                fromName.val('Petroleum Logistic Service');
+                fromEmail.val('no-reply@petrologservice.com');
+                return;
+            }
+
+            fromName.val('PLS');
+            fromEmail.val('no-reply@plsprolog.com');
+        });
+
+        fd.on('change',function() {
+            var fld = filled();
+            st.prop('disabled',!fld).text(fld ? 'Go, go, go!' : 'Missing information...');
+
+            if (fld) {
+                st.focus();
+            }
+        });
+
+        f.on('submit',function(e) {
+            var d = getFormVals(f);
+
+            if (d.action == 'download') {
+                return;
+            }
+
+            e.preventDefault();
+            e.stopPropagation();
+
+            var t = st.text();
+            st.prop('disabled',true).text('Please wait...');
+
+            $.ajax({url:'/create/send',data:d,type:'post',
+                success:function(r) {
+                    alert(r && r.ok ? 'Alright! We just sent this email for you!' : 'Huh! Somehing went wrong...');
+                },
+                error:function(r) {
+                    alert('Huh, somthing went wrong!');
+                },
+                complete:function() {
+                    st.text(t).prop('disabled',false);
+                }
+            });
+
+            console.log(f);
+        });
+
+        fd.eq(0).focus();
+    });
+</script>

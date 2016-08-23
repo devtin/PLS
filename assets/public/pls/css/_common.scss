@@ -1,0 +1,51 @@
+body {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+img {
+    outline:none!important;
+    border:none!important;
+    margin:0;
+    padding:0;
+}
+
+body * {
+    font-family:Arial,sans-serif;
+    font-size:14px;
+    line-height:1.25em;
+}
+
+a.no-download {
+    cursor:default;
+    pointer-events:none;
+}
+
+table.content {
+    position:relative;
+    margin:0 auto;
+
+    h1 {
+        line-height:1em;
+    }
+}
+
+a.survey {
+    text-align:center;
+    color:#ffffff;
+    text-decoration:none;
+    font-weight:200;
+    margin-top:10px;
+    display:inline-block;
+}
+
+br {
+    display:none;
+}
+
+*.show-outlook {
+    max-height:0; /* Gmail*/
+    display:none; /* Generic*/
+    overflow:hidden; /* Generic */
+    font-size:0; /* Be careful with this one, only use if absolutely required */
+}

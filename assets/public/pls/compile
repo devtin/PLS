@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+BASEDIR=$(dirname $0)
+cd $BASEDIR
+
+./email.js compile --file email-petroleum.html --out ../../views/email-pet.html
+./email.js compile --file email-pls.html --out ../../views/email-pls.html
+
+git add ../../views/email-pet.html
+git add ../../views/email-pls.html

@@ -1,0 +1,23 @@
+{
+  "name": "pls",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "basic-auth-connect": "^1.0.0",
+    "bluebird": "^3.4.1",
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "hogan.js": "^3.0.2",
+    "lodash": "^4.14.2",
+    "mustachy": "git+https://github.com/devtin/mustachy.git",
+    "restler": "^3.4.0",
+    "utf8": "^2.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

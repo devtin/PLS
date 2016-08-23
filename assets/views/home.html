@@ -1,0 +1,74 @@
+<input type="hidden" name="email" value="{{email}}">
+<input type="hidden" name="platform" value="{{platform}}">
+<header>
+    <div class="container">
+        <img src="/images/logo-{{platform}}.svg" class="logo" alt="">
+    </div>
+</header>
+<div class="container-main">
+    <div class="answer good">
+        <div class="title">
+            <div class="ico"></div>
+            <a class="change-answer">Change my answer</a>
+        </div>
+        <div class="content">
+            <h1>That's Great!</h1>
+            <form spellcheck="false" autocomplete="off">
+                <input type="hidden" name="happy" value="yes">
+                <textarea name="what-was-right" placeholder="Tell us what we got right..."></textarea>
+                <button class="good" type="submit">Done!</button>
+            </form>
+        </div>
+    </div>
+    <div class="answer bad">
+        <div class="title">
+            <div class="ico"></div>
+            <a class="change-answer">Change my answer</a>
+        </div>
+        <div class="content">
+            <h1>):</h1>
+            <form spellcheck="false" autocomplete="off">
+                <input type="hidden" name="happy" value="no">
+                <p><label><input type="radio" name="what-was-bad" value="Customer Service"> Customer Service</label></p>
+                <p><label><input type="radio" name="what-was-bad" value="Quality"> Quality</label></p>
+                <p><label><input type="radio" name="what-was-bad" value="Environment"> Environment</label></p>
+                <p><label><input type="radio" name="what-was-bad" value="Wait Time"> Wait Time</label></p>
+                <p><label><input type="radio" name="what-was-bad" value="Other"> Other</label></p>
+                <br>
+                <textarea name="comments" placeholder="Comments..."></textarea>
+                <button class="bad" type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+    <div class="answer thanks">
+        <div class="content">
+            <h1>Thank you!</h1>
+            <p style="text-align:center;">We received your information.</p>
+        </div>
+    </div>
+    <div class="prompt on">
+        {{#pls}}
+        <div class="pic-container">
+            <div class="pic"></div>
+        </div>
+        {{/pls}}
+        <div class="q ask on">
+            <div class="question">
+                <p>
+                    We appreciate your business and want to make sure we meet your expectations. Please help us serve you better by taking a couple of minutes to tell us about the service that you have received.
+                </p>
+                <h1>How was your experience?</h1>
+                <p>
+                    <a class="btn btn-yes"></a>
+                    <a class="btn btn-no"></a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="container">
+        Copyright © {{platform-name}} 2016 - Todos los derechos reservados
+        <a href="{{linked-in}}" target="_blank" class="linked-in"><i class="fa fa-linked-in"></i></a>
+    </div>
+</footer>

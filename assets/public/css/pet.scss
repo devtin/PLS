@@ -1,0 +1,74 @@
+@import "common";
+
+body {
+    background:url(../images/bg-pattern.jpg) left top fixed $color-gray-dark repeat;
+}
+
+header {
+    background:$color-beige;
+}
+
+footer {
+    background:$color-blue;
+}
+
+.container-main {
+    background:url(../images/bg-pet.jpg) center center no-repeat;
+    @include cross-browser(background-size,cover);
+}
+
+.pic-container {
+    @extend .box-shadow;
+    width:300px;
+    left:40px;
+    top:-40px;
+    bottom:40px;
+    position:absolute;
+    background:$color-white;
+
+    .pic {
+        $pad:20px;
+        position:absolute;
+        background:url(../images/pic.jpg) no-repeat center center;
+        @include cross-browser(background-size,cover);
+        left:$pad;
+        top:$pad;
+        right:$pad;
+        bottom:$pad;
+    }
+
+    @media screen and (max-width:$screen-sm) {
+        display:none;
+    }
+
+    @media screen and (max-height:680px) {
+        top:-20px;
+        bottom:20px;
+        left:20px;
+    }
+
+    @media screen and (min-height:900px) {
+        top:-100px;
+        bottom:100px;
+        left:100px;
+    }
+}
+
+.logo {
+    height:42px;
+}
+
+.prompt {
+    background:transparent;
+    @include cross-browser(box-shadow,none);
+    .ask {
+        @extend .box-shadow-light;
+        background:#fff;
+    }
+}
+
+.prompt,.answer {
+    h1,h2,h3 {
+        color:$color-blue;
+    }
+}

@@ -1,0 +1,64 @@
+.animate-slow-transform {
+  -webkit-transition: -webkit-transform .8s ease-in-out;
+  /* Changed here */
+  -moz-transition: -moz-transform .8s ease-in-out;
+  -o-transition: -o-transform .8s ease-in-out;
+  transition: transform .8s ease-in-out; }
+
+.animate-linear-transform {
+  -webkit-transition: -webkit-transform 1s linear;
+  /* Changed here */
+  -moz-transition: -moz-transform 1s linear;
+  -o-transition: -o-transform 1s linear;
+  transition: transform 1s linear; }
+
+.animate {
+  -ms-transition: all 0.3s ease-in-out !important;
+  -o-transition: all 0.3s ease-in-out !important;
+  -moz-transition: all 0.3s ease-in-out !important;
+  -webkit-transition: all 0.3s ease-in-out !important;
+  transition: all 0.3s ease-in-out !important; }
+
+.animate-position-top {
+  -ms-transition: top 0.3s ease-in-out !important;
+  -o-transition: top 0.3s ease-in-out !important;
+  -moz-transition: top 0.3s ease-in-out !important;
+  -webkit-transition: top 0.3s ease-in-out !important;
+  transition: top 0.3s ease-in-out !important; }
+
+.animate-fast {
+  -ms-transition-duration: 0.2s !important;
+  -o-transition-duration: 0.2s !important;
+  -moz-transition-duration: 0.2s !important;
+  -webkit-transition-duration: 0.2s !important;
+  transition-duration: 0.2s !important; }
+
+.animate-slow {
+  -ms-transition-duration: 0.8s !important;
+  -o-transition-duration: 0.8s !important;
+  -moz-transition-duration: 0.8s !important;
+  -webkit-transition-duration: 0.8s !important;
+  transition-duration: 0.8s !important; }
+
+.animate-slow-opacity {
+  -ms-transition: opacity 0.8s ease-out !important;
+  -o-transition: opacity 0.8s ease-out !important;
+  -moz-transition: opacity 0.8s ease-out !important;
+  -webkit-transition: opacity 0.8s ease-out !important;
+  transition: opacity 0.8s ease-out !important; }
+
+.animate-out {
+  -ms-transition: all 0.3s ease-out !important;
+  -o-transition: all 0.3s ease-out !important;
+  -moz-transition: all 0.3s ease-out !important;
+  -webkit-transition: all 0.3s ease-out !important;
+  transition: all 0.3s ease-out !important; }
+
+.animate-out-fast {
+  -ms-transition: all 0.2s ease-out !important;
+  -o-transition: all 0.2s ease-out !important;
+  -moz-transition: all 0.2s ease-out !important;
+  -webkit-transition: all 0.2s ease-out !important;
+  transition: all 0.2s ease-out !important; }
+
+/*# sourceMappingURL=common.css.map */
