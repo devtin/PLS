@@ -25,26 +25,8 @@ if (!process.env.SENDINBLUE_KEY) {
     process.exit();
 }
 
-const FROM          = {
-    'pls'               : {
-        email               : 'no-reply@plsprolog.com',
-        name                : 'PLS'
-    },
-    'pet'               : {
-        email               : 'no-reply@petrologservice.com',
-        name                : 'Petroleum Logistic Service'
-    }
-},
-    TO              = {
-        'pls'               : {
-            email               : 'info@plsprolog.com',
-            name                : 'PLS'
-        },
-        'pet'               : {
-            email               : 'info@petrologservice.com',
-            name                : 'Petroleum Logistic Service'
-        }
-    };
+const FROM          = require(__dirname+'/emails-from.json'),
+    TO              = require(__dirname+'/emails-to.json');
 
 require('./mailin.js');
 
@@ -190,7 +172,7 @@ app.get(/^\/create\/?$/,function(req,res) {
     res.mustachy
         .set('title','Create!')
         .call('set',LAST_SENT_DATA)
-        .call('appendTemplate','create.html','body')
+        .call('appendTemplate','create.html','body',{from:FROM})
         .call('render');
 });
 

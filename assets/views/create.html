@@ -40,6 +40,8 @@
 </div>
 <script>
 
+    var FROM = {{{from}}};
+
     function getFormVals(f) {
         f = f instanceof jQuery ? f : $(f);
 
@@ -89,14 +91,11 @@
                 return;
             }
 
-            if ($this.val() == 'pet') {
-                fromName.val('Petroleum Logistic Service');
-                fromEmail.val('no-reply@petrologservice.com');
-                return;
-            }
 
-            fromName.val('PLS');
-            fromEmail.val('no-reply@plsprolog.com');
+            if ($this.val()) {
+                fromName.val(FROM[$this.val()].name);
+                fromEmail.val(FROM[$this.val()].email);
+            }
         });
 
         fd.on('change',function() {
