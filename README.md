@@ -11,7 +11,7 @@
 
 # Prerequisites
 
-- [node.js](https://nodejs.org)
+- [node.js](https://nodejs.org) >= 6.3
 - [nohup](https://en.wikipedia.org/wiki/Nohup) (for linux and the sake of this doc)
 
 PS: this documentation is Linux oriented even though node.js can be run on windows too.
