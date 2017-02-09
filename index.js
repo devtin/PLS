@@ -115,7 +115,7 @@ class PLS extends Mustachy {
                 if (wait && !p.doit) {
                     Queue[p.email] = setTimeout(function() {
                         send(data);
-                    },5*60*1000);
+                    },60*1000);
 
                     return resolve({ok:true,message:'queued'});
                 }
