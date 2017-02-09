@@ -131,7 +131,8 @@ class PLS extends Mustachy {
         });
 
         this.get(/^\/create\/?$/,function(req,res) {
-            this.addAsset([
+            this.loadResources()
+                .call('addAsset',[
                     'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css',
                     'admin.css'
                 ],'head')
